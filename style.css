@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Chango:regular);
+
+@keyframes flipandscale {
+    0% {
+        transform: scale(1) rotateY(0deg);
+    }
+
+    100% {
+        transform: scale(1.3) rotateY(180deg);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Chango", Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100vw;
+}
+
+main {
+    width: 100%;
+    background-color: #4D682A;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.buttons button {
+    display: flex;
+    min-height: 144px;
+    font-size: 72px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.red {
+    background-color: #F26046;
+    color: white;
+}
+
+.red:hover, .red:active {
+    background-color: white;
+    color: #F26046;
+    border: 1px solid #F26046;
+}
+
+.yellow {
+    background-color: #FFC776;
+    color: #402909;
+}
+
+.yellow:hover, .yellow:active {
+    background-color: #402909;
+    color: #FFC776;
+    border: 1px solid #FFC776;
+}
+
+.blue {
+    background-color: #BAECE7;
+    color: #214441;
+}
+
+.blue:hover, .blue:active {
+    background: #214441;
+    color: #BAECE7;
+    border: 1px solid #BAECE7;
+}
+
+.purple {
+    background-color: #E5D3E4;
+    color: #4D254A;
+}
+
+.purple:hover, .purple:active {
+    background-color: #4D254A;
+    color: #E5D3E4;
+    border: 1px solid #E5D3E4;
+}
+
+.snowflake {
+    display: none;
+    font-size: 45px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    animation: flipandscale 500ms forwards;
+}
+
+@media screen and (min-width: 720px) {
+    .buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .snowflake {
+        display: inline;
+    }
+
+    body {
+        padding: 30px 60px 30px 60px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .snowflake {
+        display: inline;
+    }
+
+    body {
+        padding: 30px 60px 30px 60px;
+    }
+}
